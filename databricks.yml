@@ -30,6 +30,7 @@ targets:
     workspace:
       host: https://dbc-ff2267f3-98c6.cloud.databricks.com
       profile: AS
+      root_path: /Workspace/Users/${workspace.current_user.userName}/F1_workspace/${bundle.name}/${bundle.target}
     variables:
       catalog: workspace
       schema: ${workspace.current_user.short_name}
@@ -37,8 +38,9 @@ targets:
     mode: production
     workspace:
       host: https://dbc-ff2267f3-98c6.cloud.databricks.com
+      profile: AS
       # We explicitly deploy to /Workspace/Users/srivatsaamit3@gmail.com to make sure we only have a single copy.
-      root_path: /Workspace/Users/srivatsaamit3@gmail.com/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Workspace/Users/srivatsaamit3@gmail.com/F1_workspace/${bundle.name}/${bundle.target}
     variables:
       catalog: workspace
       schema: prod
