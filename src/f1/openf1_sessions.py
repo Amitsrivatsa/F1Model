@@ -2,13 +2,13 @@
 This is our reusable API client. It is responsible for making requests, streaming responses to disk and handling retries
 """
 
-import requests
+import random
 import time
+from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from databricks.sdk import WorkspaceClient
-from datetime import datetime, timezone
-import random
+
+import requests
 
 
 class OpenF1Client:
