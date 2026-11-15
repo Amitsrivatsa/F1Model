@@ -15,8 +15,8 @@ from pathlib import Path
 
 from databricks.sdk import WorkspaceClient
 
-from f1.manifest import ExtractionState, Manifest
-from f1.openf1_sessions import OpenF1Client
+from f1.Session_bulk_extractor.manifest import ExtractionState, Manifest
+from f1.Session_bulk_extractor.openf1_sessions import OpenF1Client
 from pyspark.sql import SparkSession
 
 LOG = logging.getLogger(__name__)
@@ -182,5 +182,7 @@ with OpenF1Client() as api:
 
                 print(f"Sessions found: {len(sessions)}")
                 print(f"Saved: {destination}")
+
+        print(f"Skipping season : {year} as it already exists! ")
 
 print("\nSession extraction completed.")
