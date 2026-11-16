@@ -14,7 +14,7 @@ import requests
 class OpenF1Client:
     base_url = "https://api.openf1.org/v1"
 
-    def __init__(self, min_interval=2, max_attempts=5):
+    def __init__(self, min_interval=1, max_attempts=5):
         self.min_interval = min_interval
         self.max_attempts = max_attempts
         self.http = requests.Session()
